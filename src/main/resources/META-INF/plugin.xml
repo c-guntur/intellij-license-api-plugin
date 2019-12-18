@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>none.cgutils.license</id>
+    <name>Licenser</name>
+    <version>1.0.0</version>
+
+    <description><![CDATA[
+    Fetch License details for a given license
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="Licenser.LicenseAction" text="License" description="Show license details">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="none.cgutils.license.LicenseAction" text="Check License ..."
+                    description="Check a license" id="Licenser.Actions.LicenseAction"/>
+        </group>
+    </actions>
+</idea-plugin>
